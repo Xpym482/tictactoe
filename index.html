@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="tictactoe.js"></script>
+</head>
+<body>
+    <div class="anim-area">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="container">
+            <div class="restart-game">
+                <input class="startGame" type="button" value="Start Game" onclick="gameStatus()">
+            </div>
+            <div class="left">
+                <div class="box up" onclick="boardFill(0)"></div>
+                <div class="box center" onclick="boardFill(1)"></div>
+                <div class="box down" onclick="boardFill(2)"></div>
+            </div>
+            <div class="center">
+                <div class="box up" onclick="boardFill(3)"></div>
+                <div class="box center" onclick="boardFill(4)"></div>
+                <div class="box down" onclick="boardFill(5)"></div>
+            </div>
+            <div class="right">
+                <div class="box up" onclick="boardFill(6)"></div>
+                <div class="box center" onclick="boardFill(7)"></div>
+                <div class="box down" onclick="boardFill(8)"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
