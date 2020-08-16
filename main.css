@@ -6,13 +6,33 @@
 html, body{
     width: 100%;
     height: 100%;
+    font-family: helvetica, sans-serif;
 }
 
 .restart-game{
-    width: 100%;
     height: 50%;
-    background: black;
     position: absolute;
+    text-align: center;
+    width: 150%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+}
+
+.restart-element{
+    position: relative;
+    top: 35%;
+    width: 30%;
+    height: 25%;
+    border: 0;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: linear-gradient(to left, #8942a8, #ba382f);
+    color: white;
+    font-size: 25px;
 }
 
 .container{
@@ -35,8 +55,7 @@ html, body{
 }
 
 .startGame{
-    display: inline-block;
-    margin: 10px;
+    cursor: pointer;
 }
 
 .anim-area{
@@ -124,14 +143,10 @@ html, body{
 }
 
 span.text{
-    font-family: helvetica;
-    font-size: 40px;
+    font-family: helvetica, sans-serif;
+    font-size: 70px;
     height: 100%;
     display: inline-flex;
     align-items: center;
-}
-
-.line-1{
-    background: red;
-
+    color: white;
 }

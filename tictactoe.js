@@ -3,6 +3,8 @@ let gameFinished = true; // set true if game finished
 let whoWon = "";
 let boxes;
 let board;
+const restartGameDiv = document.getElementById("restart-game");
+
 
 // 1 - null, 2 - cross
 
@@ -18,8 +20,10 @@ let startBoard = [
  * IMPLEMENT DESIGN
  */
 function gameStatus() {
+	restartGameDiv.style = "display: none";
 	gameFinished = false;
 	board = [...startBoard];
+	whoWon = "";
 	if(boxes) {
 		for (let item of boxes){
 			item.innerHTML = "";
@@ -29,7 +33,8 @@ function gameStatus() {
 
 function boardFill(squareNum) {
 	boxes = document.getElementsByClassName("box");
-	if(whoWon === "X"){
+	if(whoWon){
+		restartGameDiv.style = "display: flex";
 		alert("Winner is" + whoWon);
 	}
 

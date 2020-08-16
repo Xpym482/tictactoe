@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>TicTacToe</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    <script src="tictactoe.js"></script>
 </head>
 <body>
     <div class="anim-area">
@@ -17,8 +16,9 @@
             <li></li>
         </ul>
         <div class="container">
-            <div class="restart-game">
-                <input class="startGame" type="button" value="Start Game" onclick="gameStatus()">
+            <div class="restart-game" id="restart-game">
+                <div class="winner-is restart-element">Start Game</div>
+                <input class="startGame restart-element" type="button" value="Start Game" onclick="gameStatus()">
             </div>
             <div class="left">
                 <div class="box up" onclick="boardFill(0)"></div>
@@ -37,5 +37,6 @@
             </div>
         </div>
     </div>
+    <script src="tictactoe.js"></script>
 </body>
 </html>
