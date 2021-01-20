@@ -10,10 +10,10 @@ html, body{
 }
 
 .restart-game{
-    height: 50%;
+    height: 100%;
     position: absolute;
     text-align: center;
-    width: 150%;
+    width: 100%;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
@@ -22,8 +22,8 @@ html, body{
 .restart-element{
     position: relative;
     top: 35%;
-    width: 30%;
-    height: 25%;
+    width: 20%;
+    height: 15%;
     border: 0;
     margin: 20px;
     display: flex;
@@ -37,7 +37,7 @@ html, body{
 
 .container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: inherit;

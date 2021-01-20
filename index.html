@@ -16,27 +16,28 @@
             <li></li>
         </ul>
         <div class="container">
-            <div class="restart-game" id="restart-game">
-                <div class="winner-is restart-element">Start Game</div>
-                <input class="startGame restart-element" type="button" value="Start Game" onclick="gameStatus()">
-            </div>
-            <div class="left">
+            <div class="left" style="display: flex">
                 <div class="box up" onclick="boardFill(0)"></div>
                 <div class="box center" onclick="boardFill(1)"></div>
                 <div class="box down" onclick="boardFill(2)"></div>
             </div>
-            <div class="center">
+            <div class="center" style="display: flex">
                 <div class="box up" onclick="boardFill(3)"></div>
                 <div class="box center" onclick="boardFill(4)"></div>
                 <div class="box down" onclick="boardFill(5)"></div>
             </div>
-            <div class="right">
+            <div class="right" style="display: flex">
                 <div class="box up" onclick="boardFill(6)"></div>
                 <div class="box center" onclick="boardFill(7)"></div>
                 <div class="box down" onclick="boardFill(8)"></div>
             </div>
         </div>
+        <div class="restart-game" id="restart-game">
+<!--            <div class="winner-is restart-element">Winner is ...</div>-->
+            <input class="startGame restart-element" type="button" value="Start Game" onclick="gameStatus()">
+        </div>
     </div>
     <script src="tictactoe.js"></script>
+    <script src="minimax.js"></script>
 </body>
 </html>
