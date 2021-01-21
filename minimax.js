@@ -6,7 +6,7 @@ function bestMove () {
     for (let i = 0; i < 9; i++) {
         if (board[i] === "") {
             board[i] = 'O';
-            let score = minimax(board, 0, false);
+            let score = minimax(board, "X");
             board[i] = '';
             if (score < bestScore) {
                 bestScore = score;
@@ -26,19 +26,18 @@ let scores = {
     tie: 0
 };
 
-function minimax(board, depth, isMaximizing) {
+function minimax(board, turn) {
     let result = checkWinning();
     if (result) {
         return scores[result];
     }
 
-    if (isMaximizing) {
+    if (turn === "X") {
         let bestScore = -Infinity;
         for (let j = 0; j < 9; j++) {
-            // Is the spot available?
             if (board[j] === '') {
-                board[j] = "O";
-                let score = minimax(board, depth + 1, false);
+                board[j] = "X";
+                let score = minimax(board, "O");
                 board[j] = '';
                 bestScore = Math.max(score, bestScore);
             }
@@ -47,10 +46,9 @@ function minimax(board, depth, isMaximizing) {
     } else {
         let bestScore = Infinity;
         for (let j = 0; j < 9; j++) {
-            // Is the spot available?
             if (board[j] === '') {
-                board[j] = "X";
-                let score = minimax(board, depth + 1, true);
+                board[j] = "O";
+                let score = minimax(board, "X");
                 board[j] = '';
                 bestScore = Math.min(score, bestScore);
             }
